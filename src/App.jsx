@@ -1,5 +1,4 @@
 import './App.css'
-import { Meals } from './components/Meals'
 import { Navbar } from './components/reusable/Navbar'
 import { Search } from './components/reusable/Search'
 import { Footer } from './components/reusable/Footer'
@@ -13,10 +12,7 @@ function App() {
     <>
     <Navbar /> 
     <Search />
-  
     <Outlet />
-   
-
     <Footer /> 
     </>
   )
