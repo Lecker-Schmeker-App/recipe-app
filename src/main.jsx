@@ -5,6 +5,7 @@ import './index.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import { Home } from './components/Home.jsx'
 import { Meals } from './components/Meals.jsx'
+import { MealsProvider } from './contexts/MealsContext.jsx'
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,8 @@ const router = createBrowserRouter([
 ])
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <MealsProvider>
     <RouterProvider router={router}/>
+    </MealsProvider>
   </React.StrictMode>,
 )
