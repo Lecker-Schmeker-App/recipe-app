@@ -8,10 +8,11 @@ export const Meals = () => {
     const fetchMeals = async () => {
       try {
         const response = await fetch(
-          "https://api.spoonacular.com/recipes/complexSearch?apiKey=92e8e8973dd9428f8d8ea477bb3af553"
+          "https://www.themealdb.com/api/json/v1/1/search.php?s="
         );
         const data = await response.json();
         setMeals(data);
+        console.log("data",);
       } catch (error) {
         console.log(error);
       }
@@ -19,14 +20,14 @@ export const Meals = () => {
     fetchMeals();
   }, []);
 
-  console.log(meals);
+  console.log(meals.meals);
   return (
     <main>
-      {meals.results.map((meal) => (
-        <>
-          <img src={meal.image} alt="" />
-          <h3>{meal.title} </h3>
-        </>
+      {meals.meals && meals.meals.map((meal,i) => (
+        <div key={i} >
+          <img src={meal.strMealThumb} alt="" />
+          <h3>{meal.strMeal} </h3>
+        </div>
       ))}
     </main>
   );
