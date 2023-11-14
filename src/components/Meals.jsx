@@ -22,13 +22,21 @@ export const Meals = () => {
 
   console.log(meals.meals);
   return (
-    <main>
+    <main class="bg-cyan-900 flex flex-wrap justify-center">
+
+
       {meals.meals && meals.meals.map((meal,i) => (
-        <div key={i} >
-          <img src={meal.strMealThumb} alt="" />
-          <h3>{meal.strMeal} </h3>
-        </div>
+
+        <section   key={i}  class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 ml-8 mr-8 mt-8 mb-8 w-96">
+         <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src={meal.strMealThumb} alt="" />
+             <div class="flex flex-col justify-between p-4 leading-normal md:p-8">
+        
+                <h3 class="mb-2 text-xl font-bold  text-gray-900 dark:text-white">{meal.strMeal} </h3>
+             </div>
+        </section>
       ))}
+
+
     </main>
   );
 };
