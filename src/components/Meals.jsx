@@ -20,7 +20,7 @@ export const Meals = () => {
     fetchMeals();
   }, []);
 
-  console.log(meals.meals);
+ /*  console.log(meals.meals); */
   return (
     <main class="bg-cyan-900 flex flex-wrap justify-center">
 
