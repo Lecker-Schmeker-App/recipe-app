@@ -8,7 +8,7 @@ export const Meals = () => {
     const fetchMeals = async () => {
       try {
         const response = await fetch(
-          "https://api.spoonacular.com/recipes/complexSearch?apiKey=92e8e8973dd9428f8d8ea477bb3af553"
+          "https://www.themealdb.com/api/json/v1/1/search.php?s="
         );
         const data = await response.json();
         setMeals(data);

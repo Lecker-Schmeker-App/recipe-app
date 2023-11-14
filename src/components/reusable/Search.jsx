@@ -1,7 +1,5 @@
-
+import { useState } from "react";
 
 export const Search = () => {
-  return (
-    <div>Search</div>
-  )
-}
+  return <div>Search</div>;
+};
