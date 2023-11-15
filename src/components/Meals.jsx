@@ -32,6 +32,10 @@ export const Meals = () => {
              <div class="flex flex-col justify-between p-4 leading-normal md:p-8">
         
                 <h3 class="mb-2 text-xl font-bold  text-gray-900 dark:text-white">{meal.strMeal} </h3>
+                <ul>
+                  <li class="italic text-green-300">{meal.strCategory}</li>
+                  <li class="italic text-green-700">{meal.strArea}</li>
+                </ul>
              </div>
         </section>
       ))}
