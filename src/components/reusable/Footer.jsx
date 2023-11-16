@@ -10,7 +10,7 @@ export const Footer = () => {
   };
 
   return (
-    <footer className="flex flex-wrap justify-center items-center bg-gray-900 py-10">
+    <footer className="flex flex-wrap justify-center items-center bg-gray-900 py-10 ">
       {submitted ? (
         <p>Thanks, for your Feedback!</p>
       ) : (
