@@ -4,13 +4,13 @@ import image from "../img/backgroundMain.jpg";
 import { Link } from "react-router-dom";
 
 export const Meals = () => {
-  const { meals, setMeals } = useContext(MealsContext);
+  const { meals, setMeals, searchTerm } = useContext(MealsContext);
 
   useEffect(() => {
     const fetchMeals = async () => {
       try {
         const response = await fetch(
-          "https://www.themealdb.com/api/json/v1/1/search.php?s=beef"
+          "https://www.themealdb.com/api/json/v1/1/search.php?s=" + searchTerm
         );
         const data = await response.json();
         setMeals(data);
@@ -20,7 +20,7 @@ export const Meals = () => {
       }
     };
     fetchMeals();
-  }, []);
+  }, [searchTerm]);
 
   /*  console.log(meals.meals); */
   return (
